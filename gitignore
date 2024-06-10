@@ -1,0 +1,7 @@
+.env
+./*/*/_pycache__
+./*/*//migrations
+.DS_Store
+./.DS_Store
+./*/.DS_Store
+./*/*/.DS_Store
