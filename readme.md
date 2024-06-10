@@ -23,7 +23,7 @@ docker-compose up
 
 Now app is hosted at local host 8000 port.
 
-### Our home page will be like this
+### Our home page ( http://127.0.0.1:8000/ ) will be like this
 
 - ![Home page 1](/docs/images/Form_Resume_1.png)
 - ![Home page 2](/docs//images//Form_Resume_2.png)
