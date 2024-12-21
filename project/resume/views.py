@@ -1,6 +1,6 @@
 from django.shortcuts import render
 from .models import Profile
-import pdfkit
+from pdfkit import from_string
 from django.http import HttpResponse
 from django.template import loader
 import io
@@ -12,6 +12,8 @@ def accept(request):
         name = request.POST.get("name", "")
         email = request.POST.get("email", "")
         phone = request.POST.get("phone", "")
+        if not name or not email or not phone:
+            return render(request, 'accept.html', context={'error': 'Please fill all the fields'}, status=400)
         summary = request.POST.get("summary", "")
         degree = request.POST.get("degree", "")
         school = request.POST.get("school", "")
@@ -34,7 +36,7 @@ def resume(request, id):
         'page-size': 'Letter',
         'encoding': "UTF-8",
     }
-    pdf = pdfkit.from_string(html, False, options)
+    pdf = from_string(html, False, options)
     response = HttpResponse(pdf, content_type='application/pdf')
     response['Content-Disposition'] = 'attachment'
     filename = "resume.pdf"
