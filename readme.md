@@ -23,7 +23,7 @@ docker-compose up
 
 Now app is hosted at local host 8000 port.
 
-### Our home page will be like this
+### Our home page ( http://127.0.0.1:8000/ ) will be like this
 
 - ![Home page 1](/docs/images/Form_Resume_1.png)
 - ![Home page 2](/docs//images//Form_Resume_2.png)
@@ -31,7 +31,7 @@ Now app is hosted at local host 8000 port.
 
 After we click on submit button data will be stored in backend db.
 
-## We can go to {http://127.0.0.1:8000/list/} to list all resumes and download them
+## We can go to http://127.0.0.1:8000/list/ to list all resumes and download them
 
 ![Image to list resume](/docs/images/List_resumes.png)
 
